@@ -18,6 +18,10 @@ app.use("/package", packageRoutes);
 app.use("/awb", awbRoutes);
 app.use("/verification", aiVerificationRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is live!");
+});
+
 app.use(errorHandler);
 
 module.exports = app;
