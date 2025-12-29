@@ -1,0 +1,55 @@
+[
+  {
+    "trackingNo": "885961445218",
+    "service": "FedEx Express",
+    "status": "Created",
+    "createdAt": "2025-12-22T00:00:00.000Z",
+    "updatedAt": "2025-12-22T00:00:00.000Z",
+    "shipper": {
+      "_id": "64a1f1b2345abcd123456789",
+      "name": "Test Shipper",
+      "contact": "9999999999",
+      "email": "shipper@test.com",
+      "address": {
+        "line1": "123 Shipper St",
+        "line2": "Suite 1",
+        "city": "Mumbai",
+        "country": "India",
+        "postalCode": "400001"
+      },
+      "isActive": true,
+      "createdAt": "2025-12-22T00:00:00.000Z",
+      "updatedAt": "2025-12-22T00:00:00.000Z"
+    },
+    "receiver": {
+      "_id": "64a1f1b2345abcd123456790",
+      "name": "Test Receiver",
+      "contact": "8888888888",
+      "email": "receiver@test.com",
+      "address": {
+        "line1": "456 Receiver Rd",
+        "line2": "Apt 10",
+        "city": "Delhi",
+        "country": "India",
+        "postalCode": "110001"
+      },
+      "isActive": true,
+      "createdAt": "2025-12-22T00:00:00.000Z",
+      "updatedAt": "2025-12-22T00:00:00.000Z"
+    },
+    "packages": [
+      {
+        "_id": "64a1f3d2345abcd123456792",
+        "packageNumber": "PKG001",
+        "weight": { "value": 2, "unit": "kg" },
+        "dimensions": { "length": 30, "width": 20, "height": 10, "unit": "cm" },
+        "quantity": 1,
+        "description": "Test Package",
+        "declaredValue": { "amount": 1000, "currency": "INR" },
+        "status": "CREATED",
+        "createdAt": "2025-12-22T00:00:00.000Z",
+        "updatedAt": "2025-12-22T00:00:00.000Z"
+      }
+    ]
+  }
+]

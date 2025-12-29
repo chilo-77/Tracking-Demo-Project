@@ -1,0 +1,21 @@
+{
+  "message": "Below are the documents required",
+  "documents": [
+    {
+      "name": "Invoice",
+      "description": "Commercial invoice of the shipment"
+    },
+    {
+      "name": "Packing List",
+      "description": "Details of all packages"
+    },
+    {
+      "name": "Certificate of Origin",
+      "description": "Proof of shipment origin"
+    },
+    {
+      "name": "KYC",
+      "description": "Shipper verification document"
+    }
+  ]
+}

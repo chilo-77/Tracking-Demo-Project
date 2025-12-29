@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "64a1f3d2345abcd123456792",
+    "awbId": "64a1f2c2345abcd123456791",
+    "packageNumber": "PKG001",
+    "weight": { "value": 2, "unit": "kg" },
+    "dimensions": { "length": 30, "width": 20, "height": 10, "unit": "cm" },
+    "quantity": 1,
+    "description": "Test Package",
+    "declaredValue": { "amount": 1000, "currency": "INR" },
+    "status": "CREATED",
+    "createdAt": "2025-12-22T00:00:00.000Z",
+    "updatedAt": "2025-12-22T00:00:00.000Z"
+  }
+]

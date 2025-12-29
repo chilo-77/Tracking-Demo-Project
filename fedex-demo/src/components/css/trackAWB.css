@@ -1,0 +1,46 @@
+.track-awb-page {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.top-bar {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 15px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+}
