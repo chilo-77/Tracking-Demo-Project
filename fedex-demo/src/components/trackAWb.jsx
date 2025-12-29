@@ -8,7 +8,7 @@ function TrackAWB() {
   const [AWBData, setAWBData] = useState("");
 
   const getAWB = async function () {
-    const req = await fetch("http://localhost:3000/awb/getAWB", {
+    const req = await fetch(`${process.env.REACT_APP_BACKEND_URL}/awb/getAWB`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

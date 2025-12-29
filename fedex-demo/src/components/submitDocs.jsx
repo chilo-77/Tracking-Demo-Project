@@ -11,12 +11,15 @@ function SubmitDocuments() {
   console.log(docsReq);
 
   const getAwb = async (awb) => {
-    const data = await fetch("http://localhost:3000/awb/getAWB", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const data = await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/awb/getAWB`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const res = await data.json();
     const res1 = res.data;
@@ -26,7 +29,7 @@ function SubmitDocuments() {
     console.log(trueAwb);
 
     const docsReq = await fetch(
-      "http://localhost:3000/documents/documentationReq?origin=India&destination=UAE",
+      `${process.env.REACT_APP_BACKEND_URL}/documents/documentationReq?origin=India&destination=UAE`,
       {
         method: "GET",
         headers: {
@@ -58,7 +61,7 @@ function SubmitDocuments() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/verification/verify",
+        `${process.env.REACT_APP_BACKEND_URL}/verification/verify`,
         {
           method: "POST",
           body: formData,

@@ -9,7 +9,7 @@ function DocumentRequirement() {
 
   const docRequest = async () => {
     const doc = await fetch(
-      `http://localhost:3000/documents/documentationReq?origin=${origin}&destination=${destination}`,
+      `${process.env.REACT_APP_BACKEND_URL}/documents/documentationReq?origin=${origin}&destination=${destination}`,
       {
         method: "GET",
         headers: {
