@@ -5,11 +5,16 @@ let classifierPromise = null;
 
 async function getClassifier() {
   if (!classifierPromise) {
-    const { pipeline } = await import("@xenova/transformers");
-    classifierPromise = pipeline(
-      "text-classification",
-      "Xenova/distilbert-base-uncased-finetuned-sst-2-english"
-    );
+    try {
+      const { pipeline } = await import("@xenova/transformers");
+      classifierPromise = pipeline(
+        "text-classification",
+        "Xenova/distilbert-base-uncased-finetuned-sst-2-english"
+      );
+    } catch (err) {
+      console.error("Classifier init failed", err);
+      throw err;
+    }
   }
   return classifierPromise;
 }
@@ -33,6 +38,8 @@ exports.getVerification = (req, res) => {
       const classifier = await getClassifier();
       const result = await classifier(text.slice(0, 1000));
 
+      console.log("PDF length:", text.length);
+      console.log("Initializing classifier...");
       res.json({
         engine: "local-xenova",
         analysis: result,
