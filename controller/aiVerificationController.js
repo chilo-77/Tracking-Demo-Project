@@ -33,7 +33,7 @@ exports.getVerification = (req, res) => {
 
   pdfParser.on("pdfParser_dataReady", async () => {
     try {
-      // const text = pdfParser.getRawTextContent();
+      const text = pdfParser.getRawTextContent();
 
       // const classifier = await getClassifier();
       // const result = await classifier(text.slice(0, 1000));
