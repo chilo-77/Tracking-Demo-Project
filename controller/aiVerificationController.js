@@ -33,17 +33,23 @@ exports.getVerification = (req, res) => {
 
   pdfParser.on("pdfParser_dataReady", async () => {
     try {
-      const text = pdfParser.getRawTextContent();
+      // const text = pdfParser.getRawTextContent();
 
-      const classifier = await getClassifier();
-      const result = await classifier(text.slice(0, 1000));
+      // const classifier = await getClassifier();
+      // const result = await classifier(text.slice(0, 1000));
 
-      console.log("PDF length:", text.length);
-      console.log("Initializing classifier...");
+      // console.log("PDF length:", text.length);
+      // console.log("Initializing classifier...");
+      // res.json({
+      //   engine: "local-xenova",
+      //   analysis: result,
+      //   note: "AI flags potential issues, human validates finally",
+      // });
+
       res.json({
-        engine: "local-xenova",
-        analysis: result,
-        note: "AI flags potential issues, human validates finally",
+        engine: "vercel-safe-mode",
+        analysis: "AI disabled due to serverless limits",
+        note: "PDF received & processed successfully",
       });
     } catch (err) {
       console.error(err);
