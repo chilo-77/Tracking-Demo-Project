@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/documents", documents);
-app.use("/party", partyRoutes);
+app.use("/", partyRoutes);
 app.use("/package", packageRoutes);
 app.use("/awb", awbRoutes);
 app.use("/verification", aiVerificationRoutes);
