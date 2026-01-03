@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pickupController = require("./../controller/pickupController");
+const pickupController = require("../../controller/pickupController");
 
 router.post("/schedulePickup", pickupController.schedulePickup);
 

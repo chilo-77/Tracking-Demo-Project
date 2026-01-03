@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-const documents = require("../routes/documentRoute");
-const partyRoutes = require("../routes/partyRoute");
-const packageRoutes = require("../routes/packageRoute");
-const awbRoutes = require("../routes/awbRoute");
-const aiVerificationRoutes = require("../routes/aiVerificationRoute");
-const pickupRoutes = require("../routes/pickupRoute");
+const documents = require("./routes/documentRoute");
+const partyRoutes = require("./routes/partyRoute");
+const packageRoutes = require("./routes/packageRoute");
+const awbRoutes = require("./routes/awbRoute");
+const aiVerificationRoutes = require("./routes/aiVerificationRoute");
+const pickupRoutes = require("./routes/pickupRoute");
 const errorHandler = require("../errorHandler");
 
 app.use(cors());
