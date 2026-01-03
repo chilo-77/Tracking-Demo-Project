@@ -4,6 +4,16 @@ function MainPage({ setActivePage }) {
       <div
         className="option-card"
         onClick={() => {
+          setActivePage("generateawb");
+        }}
+      >
+        <h2>Generate AWB</h2>
+        <p>Generate new AWB and send demo email</p>
+      </div>
+
+      <div
+        className="option-card"
+        onClick={() => {
           setActivePage("track");
         }}
       >

@@ -1,5 +1,6 @@
 import React from "react";
 import MainPage from "./mainPage";
+import Generateawb from "./generateAWB";
 import TrackAWB from "./trackAWb";
 import DocumentRequirement from "./documentReq";
 import SubmitDocuments from "./submitDocs";
@@ -20,6 +21,9 @@ function HomePage() {
       )}
       {activePage === "submit" && (
         <SubmitDocuments setActivePage={setActivePage} />
+      )}
+      {activePage === "generateawb" && (
+        <Generateawb setActivePage={setActivePage} />
       )}
 
       {activePage !== "dashboard" && (

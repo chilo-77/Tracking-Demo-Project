@@ -17,3 +17,27 @@ exports.getAwb = async (req, res, next) => {
     data,
   });
 };
+
+exports.generateAWB = async (req, res, next) => {
+  const data = req.body;
+
+  const generateTrackingNumber = () => {
+    return Math.floor(1000000000 + Math.random() * 9000000000).toString();
+  };
+
+  const awbGeneration = {
+    trackingNo: generateTrackingNumber(),
+    service: data.service,
+    status: "CREATED",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    shipper: data[0],
+    receiver: data[1],
+    packages: data[2],
+  };
+
+  res.status(200).json({
+    message: "AWB Generated",
+    awbGeneration,
+  });
+};

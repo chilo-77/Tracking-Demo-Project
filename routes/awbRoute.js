@@ -4,4 +4,6 @@ const awbController = require("./../controller/awbController");
 
 router.get("/getAWB", awbController.getAwb);
 
+router.post("/createAWB", awbController.generateAWB);
+
 module.exports = router;

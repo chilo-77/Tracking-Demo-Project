@@ -7,4 +7,6 @@ router
   .get(partyController.getParty)
   .post(partyController.createParty);
 
+router.post("/sendEmail", partyController.informParty);
+
 module.exports = router;
